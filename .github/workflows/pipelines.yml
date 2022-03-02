@@ -31,19 +31,13 @@ jobs:
             docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
       # Runs a single command using the runners shell
-     - name: docker example
-       run: |
-            docker build ./c# -t aimvector/csharp:1.0.0
-     - name: docker build nodejs
-       run: |
-            docker build ./nodejs -t aimvector/nodejs:1.0.0
+   
      - name: docker build python
        run: |
-         docker build ./python -t aimvector/python:1.0.0
+         docker build ./python -t vevu888/python:1.0.0
          
       - name: docker push
-       run: |
-        docker push aimvector/csharp:1.0.0
-        docker push aimvector/nodejs:1.0.0
-        docker push aimvector/python:1.0.0
+        run: |
+      
+        docker push vevu888/python:1.0.0
    
