@@ -19,6 +19,7 @@ jobs:
   runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
+    
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
@@ -39,4 +40,10 @@ jobs:
      - name: docker build python
        run: |
          docker build ./python -t aimvector/python:1.0.0
+         
+      - name: docker push
+       run: |
+        docker push aimvector/csharp:1.0.0
+        docker push aimvector/nodejs:1.0.0
+        docker push aimvector/python:1.0.0
    
