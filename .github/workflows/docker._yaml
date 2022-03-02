@@ -25,7 +25,7 @@ jobs:
         docker build ./nodejs -t vevu888/nodejs:1.0.0
     - name: docker build python
       run: |
-        docker build ./python -t vevu888/python:1.0.
+        docker build ./python -t vevu888/python:1.0.0
     - name: docker push
       run: |
         docker push vevu888/csharp:1.0.0
