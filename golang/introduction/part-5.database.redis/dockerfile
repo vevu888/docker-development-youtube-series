@@ -8,6 +8,6 @@ WORKDIR /videos
 COPY ./videos/* /videos/
 RUN go build -o videos
 
-FROM alpine as runtime 
+FROM alpine:3.18.3 as runtime 
 COPY --from=build /videos/videos /
 CMD ./videos
