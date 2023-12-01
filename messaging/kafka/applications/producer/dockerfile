@@ -12,7 +12,7 @@ COPY . /app/
 
 RUN CGO_ENABLED=0 go build -o /producer
 
-FROM alpine:3.10 as runtime
+FROM alpine:3.18.5 as runtime
 
 COPY --from=build-env /producer /usr/local/bin/producer
 RUN chmod +x /usr/local/bin/producer
