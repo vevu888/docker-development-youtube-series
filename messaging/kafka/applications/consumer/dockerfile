@@ -12,7 +12,7 @@ COPY . /app/
 
 RUN CGO_ENABLED=0 go build -o /consumer
 
-FROM alpine:3.10 as runtime
+FROM alpine:3.19.3 as runtime
 
 COPY --from=build-env /consumer /usr/local/bin/consumer
 RUN chmod +x /usr/local/bin/consumer
